@@ -7,7 +7,10 @@
 use anyhow::Result;
 use lapce_plugin::{
     psp_types::{
-        lsp_types::{request::Initialize, DocumentFilter, DocumentSelector, InitializeParams, Url, MessageType},
+        lsp_types::{
+            request::Initialize, DocumentFilter, DocumentSelector, InitializeParams, MessageType,
+            Url,
+        },
         Request,
     },
     register_plugin, LapcePlugin, VoltEnvironment, PLUGIN_RPC,
@@ -121,7 +124,10 @@ impl LapcePlugin for State {
             Initialize::METHOD => {
                 let params: InitializeParams = serde_json::from_value(params).unwrap();
                 if let Err(e) = initialize(params) {
-                    PLUGIN_RPC.window_show_message(MessageType::ERROR, format!("plugin returned with error: {e}"))
+                    PLUGIN_RPC.window_show_message(
+                        MessageType::ERROR,
+                        format!("plugin returned with error: {e}"),
+                    )
                 }
             }
             _ => {}

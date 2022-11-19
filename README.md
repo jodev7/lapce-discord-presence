@@ -1,1 +1,1 @@
-# lapce-discord-presence
+# Lapce plugin to connect to Discord

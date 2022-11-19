@@ -1,9 +1,11 @@
-name = "<plugin-name>"
+name = "lapce-discord-rpc"
 version = "0.0.0"
-author = "<your name>"
-display-name = "<plugin-display-name>"
-description = "<plugin-description>"
-wasm = "bin/<plugin-name>.wasm"
+author = "jodev7"
+display-name = "Discord Presence"
+description = "Lapce plugin to connect to Discord"
+wasm = "bin/discord-rpc.wasm"
+icon = 'icons/logo.png'
+repository = "https://github.com/jodev7/lapce-discord-presence"
 
 [activation]
 language = []
